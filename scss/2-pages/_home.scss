@@ -1,0 +1,186 @@
+.home {
+
+    .hero{
+        @include default_design('images/parallax-1.jpg');
+        background-position: right center;
+    }
+
+    // fashion
+    .fashion {
+        @include default_design("images/parallax-2.jpg");
+    }
+
+    // beauty
+    .beauty {
+        @include default_design("images/parallax-3.jpg");
+    }
+
+    // about
+    .about {
+        background-color: $hover_color;
+        min-height: 100vh;
+        padding: 100px 0;
+
+        &_left {
+            h3 {
+                font-size: 42px;
+                font-weight: 400;
+                font-family: "Oswald", sans-serif;
+            }
+        }
+
+        p {
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
+        &_card {
+            margin-top: 100px;
+
+            .card {
+                background-color: $card_color;
+                text-align: center;
+                transition: all 0.5s ease-out;
+                padding: 10px 20px;
+
+                &-icon {
+                    margin: auto;
+                    height: 50px;
+                    width: 50px;
+                    line-height: 55px;
+                    border-radius: 50%;
+                    transform: translateY(-30px);
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &-head {
+                    font-family: "Oswald", sans-serif;
+                    font-weight: 300;
+                }
+
+                &-body {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background-color: $text_color;
+                    color: $card_color;
+
+                    .card-icon {
+                        background-color: $text_color;
+                    }
+                }
+            }
+        }
+
+        &_count {
+            margin-top: 130px;
+
+            h3 {
+                font-size: 38px;
+                font-weight: 300;
+                transition: 0.5s ease;
+            }
+
+            p {
+                opacity: 0.8;
+                font-weight: 400;
+            }
+
+            .text-center {
+                margin: 20px 0;
+
+                &:hover {
+                    h3 {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+
+    // video
+    .video {
+        @include default_design("images/video-img.jpg");
+        display: grid;
+        place-content: center;
+        background-color: $second_color;
+
+        .fa-play {
+            height: 130px;
+            width: 130px;
+            border: 2px solid;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 130px;
+            transition: all 0.5s ease-in;
+
+            &:hover {
+                background-color: $hover_color;
+            }
+        }
+
+        &_screen{
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: $second_color;
+            display: none;
+            z-index: 99;
+        }
+        &_close{
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            cursor: pointer;
+            background-color: $main_color;
+            padding: 20px;
+        }
+    }
+
+    // carousel
+
+    .carousel {
+        overflow: hidden;
+        background-color: $card_color;
+
+        &_body {
+            display: grid;
+            align-content: center;
+            height: 100%;
+            padding: 50px 20px;
+
+            .item {
+                p {
+                    font-size: 30px;
+                    line-height: 1.2;
+                }
+            }
+
+            .owl-theme .owl-dots {
+                display: inline-block;
+
+                .owl-dot {
+                    span {
+                        background-color: $text_color;
+                        border: 2px solid $text_color;
+                        height: 15px;
+                        width: 15px;
+                    }
+
+                    &.active span,
+                    &:hover span {
+                        background: $card_color;
+                    }
+                }
+            }
+        }
+
+        &_rating {
+            color: $rating;
+        }
+    }
+
+}

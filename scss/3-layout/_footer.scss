@@ -1,0 +1,78 @@
+// model
+.model {
+    background-color: $hover_color;
+    padding: 130px 0;
+    text-align: center;
+
+    &_body {
+        width: 70%;
+        margin: auto;
+
+        h3 {
+            font-size: 40px;
+            font-weight: 200;
+            margin: 16px 0;
+        }
+
+        p {
+            margin: 16px 0;
+            line-height: 1.4;
+        }
+
+        .primary_button {
+            margin-top: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+
+// footer
+footer {
+    background-color: $card_color;
+    padding: 130px 0;
+    text-align: center;
+
+    .footer_social {
+        i {
+            font-size: 20px;
+            margin: 0 10px;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            transition: all .5s ease;
+
+            &:hover {
+                background-color: $hover_color;
+            }
+        }
+
+    }
+
+    @media (max-width: 767px) {
+
+        .footer_social i {
+            margin: 0;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+        }
+    }
+
+
+    @media (max-width: 530px) {
+        .footer_social i {
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+        }
+
+        .copyRight {
+            font-size: 12px;
+        }
+    }
+
+
+}

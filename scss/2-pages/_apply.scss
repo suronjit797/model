@@ -1,0 +1,56 @@
+.contact_hero {
+    @include hero('images/pricing-header.jpg');
+}
+
+.about {
+    &_form {
+        padding-top: 70px;
+
+        form {
+            background-color: $card_color;
+            padding: 70px 50px 50px;
+
+            input,
+            textarea {
+                margin-bottom: 20px;
+                background-color: transparent;
+                border-radius: 5px;
+                border-color: rgba($text_color, .5);
+                padding: 5px 20px;
+                color: $text_color;
+
+                &:hover,
+                &:focus {
+                    color: $text_color;
+                    margin-bottom: 20px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    border-color: rgba($text_color, .5);
+                    padding: 5px 20px;
+                    box-shadow: none;
+                }
+
+            }
+
+        }
+
+        .about_card {
+            margin-top: 0;
+
+            .card {
+                margin-bottom: 40px;
+
+                @media (max-width: 991px) {
+                    margin: 50px 0px !important;
+                }
+            }
+
+            
+
+        }
+    }
+
+    &_map{
+        margin-top: 100px;
+    }
+}

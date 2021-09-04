@@ -1,0 +1,85 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $text_color;
+    font-family: 'Open Sans', sans-serif;
+
+    @media (max-width: 991px) {
+        text-align: center;
+        margin: auto;    
+}
+
+}
+
+h6 {
+    font-size: 30px;
+    font-weight: 300;
+    opacity: .8;
+    margin-bottom: 0;
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    font-size: 90px;
+    font-weight: 300;
+    letter-spacing: -2px;
+
+    @media (max-width: 767px) {
+        font-size: 45px;
+        letter-spacing: normal;
+    }
+
+}
+
+
+// links
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        color: lighten($link-color, 10%);
+    }
+}
+
+
+// buttons
+
+.primary_button {
+    background-color: transparent;
+    border: 2px solid $text_color;
+    color: $text_color;
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+    transition: all .5s ease;
+
+    &:hover {
+        background-color: $text_color;
+        color: $hover_color;
+    }
+}
+
+// img hover
+.img_hover {
+    @include img_hover;
+}
+

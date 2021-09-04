@@ -1,0 +1,141 @@
+.main_nav {
+    min-height: 100%;
+    background: url(images/navbar-img.jpg) no-repeat;
+    background-color: $main_color;
+    background-size: cover;
+    background-blend-mode: color;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: grid;
+    align-content: center;
+    padding: 70px 0;
+    transform: translateY(-100%);
+    transition: all .5s ease;
+
+    ul {
+        font-size: 48px;
+        font-family: 'Oswald', sans-serif;
+        list-style: none;
+        font-weight: 200;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            a {
+                position: relative;
+                text-transform: capitalize;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 8px;
+                    left: 0;
+                    height: 3px;
+                    width: 0%;
+                    background-color: $text_color;
+                    transition: all .5s ease;
+                }
+                &:hover, &.active, &:focus {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &_social {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        a {
+            height: 35px;
+            display: inline-block;
+            width: 35px;
+            margin: 0 5px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $text_color;
+                color: $hover_color;
+                transition: all .5s ease;
+            }
+        }
+    }
+
+    &.show{
+        transform: translateY(0);
+    }
+
+    .close{
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-size: 40px;
+        cursor: pointer;
+        transition: all 1s ease;
+
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+
+
+
+
+
+.nav {
+
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 20px 25PX;
+    align-items: center;
+    transition: all .5s ease;
+    z-index: 9;
+
+
+
+    &.down{
+        position: fixed;
+        background: $second_color;
+    }
+
+    &_bars {
+            cursor: pointer;
+        span {
+            height: 2px;
+            width: 30px;
+            background-color: $text_color;
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &_logo {
+            cursor: pointer;
+        img {
+            height: 40px;
+            margin-left: 30px;
+        }
+    }
+}
+

@@ -1,0 +1,140 @@
+.main_model {
+    background-color: $hover_color;
+
+    .hero {
+        @include hero('images/team-header.jpg')
+    }
+
+    .team {
+
+
+        &_about {
+            padding: 100px 0;
+
+            &_left {
+                h3 {
+                    font-size: 42px;
+                    font-weight: 400;
+                    font-family: "Oswald", sans-serif;
+                }
+            }
+
+            p {
+                opacity: 0.7;
+                font-weight: 300;
+            }
+        }
+
+
+        &_img {
+            position: relative;
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 0 auto;
+
+            img{
+                transition: all .8s ease;
+            }
+
+            &_overlay {
+                background-color: $main_color;
+                height: 90%;
+                width: 90%;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                display: grid;
+                place-content: center;
+                opacity: 0;
+                transition: all .5s ease;
+
+
+                a {
+
+                    margin: 0 5px;
+                    transform: translateY(-100px);
+                    transition: all .3s ease-in-out;
+                    opacity: 0;
+                    display: inline-block;
+
+                    i {
+                        transition: all .3s ease-in-out;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 30px;
+
+                        &:hover {
+                            background-color: $hover_color;
+                        }
+                    }
+
+                }
+            }
+
+
+            &_description {
+                text-align: center;
+                margin-top: 20px;
+
+                h4 {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 20px;
+                }
+
+                p {
+                    opacity: .7;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &_details {
+            &:hover {
+                .team_img {
+
+                    img{
+                        transform: scale(1.1);
+                    }
+
+                    &_overlay {
+                        opacity: 1;
+
+                        a {
+                            transform: translateY(0);
+                            opacity: 1;
+
+                            @for $i from 2 through 3 {
+                                &:nth-child(#{$i}) {
+                                    transition-delay: 0s+($i/10) !important;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

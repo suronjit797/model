@@ -1,0 +1,96 @@
+@mixin default_design($img) {
+    height: 100vh;
+    min-height: 400px;
+    background-image: url($img);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: $main_color;
+    background-blend-mode: color;
+    padding: 70px 0;
+
+    .container,
+    .row {
+        height: 100%;
+    }
+
+    @media (max-width: 991px) {
+        text-align: center;
+        margin: auto;
+
+        .primary_button {
+            margin: 0 auto;
+        }
+
+    }
+
+}
+
+// hero section
+
+@mixin hero($img) {
+    // hero
+    @include default_design($img);
+    height: 70vh;
+    background-color: transparent;
+
+    &_body {
+        height: 100%;
+        display: grid;
+        align-content: center;
+
+        h2 {
+            font-weight: 200;
+        }
+
+        .pagination {
+            a {
+                opacity: .7;
+                transition: .5s ease;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin img_hover {
+    position: relative;
+    transition: all .5s ease;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        display: block;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+        -webkit-transform: skewX(-25deg);
+        -ms-transform: skewX(-25deg);
+        transform: skewX(-25deg);
+    }
+
+    &:hover {
+        &::before {
+            animation: img_hover .8s;
+        }
+    }
+
+    @keyframes img_hover {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// 1-helpers
+    @import "./1-helpers/variables";
+    @import "./1-helpers/functions";
+    @import "./1-helpers/mixins";
+    @import "./1-helpers/global";
+
+
+    // 2-pages
+    @import "./2-pages/home";
+    @import "./2-pages/about";
+    @import "./2-pages/apply";
+    @import "./2-pages/model";
+    @import "./2-pages/work";
+
+// 3-layout
+    @import "./3-layout/navbar";
+    @import "./3-layout/footer";
+
+//  4-responsive
+    @import "./4-responsive/home";
+
+    

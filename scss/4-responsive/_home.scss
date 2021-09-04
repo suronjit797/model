@@ -1,0 +1,32 @@
+.home {
+    @media (max-width: 991px) {
+        .about_card .card {
+            margin: 40px;
+        }
+
+        .main_nav ul {
+            font-size: 32px;
+            font-family: 'Oswald', sans-serif;
+            list-style: none;
+            font-weight: 200;
+
+            li:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+
+    }
+
+    @media (max-width: 767px) {
+        .about_left h3 {
+            font-size: 30px;
+        }
+
+        .carousel_body .item p {
+            font-size: 20px;
+        }
+
+    }
+
+
+}

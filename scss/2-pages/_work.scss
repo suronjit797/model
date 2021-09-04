@@ -1,0 +1,43 @@
+.work {
+
+    .hero{
+        @include hero('images/services-header.jpg')
+    }
+
+    background-color: $card_color;
+
+
+
+    // pricing
+    .pricing {
+        background-color: $hover_color;
+        padding: 150px 0;
+
+        h3 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        &_details {
+            opacity: .7;
+        }
+    }
+
+    // services
+    .services{
+        text-align: center;
+        
+
+        .details{
+            padding: 70px;
+            height: 100%;
+            display: grid;
+            place-content: center;
+
+            h3{
+                font-size: 36px;
+            }
+        }
+    }
+
+}
